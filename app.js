@@ -30,8 +30,10 @@ function agregarAmigo() {
     return;
   }
 
-  // Verifica si el nombre ya existe.
-  if (amigos.includes(inputNombre)) {
+  // Verifica si el nombre ya existe comparándolos en minúscula.
+  if (
+    amigos.some((nombre) => nombre.toLowerCase() === inputNombre.toLowerCase())
+  ) {
     alert(" ¡ El nombre ya existe !");
     return;
   }
@@ -57,6 +59,15 @@ function creaListaNombres() {
   }
 }
 
+function reiniciaSorteo() {
+  // Limpia el array.
+  amigos = [];
+  // Limpia el resultado"
+  document.getElementById("resultado").innerHTML = "";
+  // Oculta el botón de reinicio.
+  document.getElementById("resetButton").style.display = "none";
+}
+
 function sortearAmigo() {
   // Valida que haya amigos disponibles.
   if (amigos.length === 0) {
@@ -72,5 +83,8 @@ function sortearAmigo() {
   limpiaListaHtml();
 
   // Muestra el nombre sorteado en la lista de resultados.
-  resultado.innerHTML = `<li>${nombreSorteado}</li>`;
+  resultado.innerHTML = `<li>Tu amigo secreto es: ${nombreSorteado}.</li>`;
+
+  // Muestra el botón de reinicio.
+  document.getElementById("resetButton").style.display = "flex";
 }

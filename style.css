@@ -142,21 +142,28 @@ ul {
   text-align: center;
 }
 
-/* Botón de sortear título */
-.button-draw {
+/* Botón de sortear título y reiniciar */
+.button-draw,
+.button-reset {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px 40px;
+  padding: 5px 40px;
   color: var(--color-white);
   background-color: var(--color-button);
   font-size: 16px;
 }
 
-.button-draw img {
+.button-draw img,
+.button-reset img {
   margin-right: 40px;
 }
 
-.button-draw:hover {
+.button-draw:hover,
+.button-reset:hover {
   background-color: var(--color-button-hover);
+}
+
+#resetButton {
+  display: none;
 }
