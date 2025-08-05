@@ -38,6 +38,21 @@ function agregarAmigo() {
 
   // Agrega el nombre al array.
   amigos.push(inputNombre);
-  console.log(amigos);
+
+  // Limpia el input y la lista HTML, luego la reconstruye.
   limpiaInput();
+  limpiaListaHtml();
+  creaListaNombres();
+}
+
+function limpiaListaHtml() {
+  // Limpia la lista.
+  document.getElementById("listaAmigos").innerHTML = "";
+}
+
+function creaListaNombres() {
+  // Recorre el array y los agrega en un li al ul.
+  for (let i = 0; i < amigos.length; i++) {
+    document.getElementById("listaAmigos").innerHTML += `<li>${amigos[i]}</li>`;
+  }
 }
