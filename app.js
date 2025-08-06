@@ -53,9 +53,27 @@ function limpiaListaHtml() {
 }
 
 function creaListaNombres() {
+  // Colores para mostrar nombres
+  const colores = [
+    "#ffffff",
+    "#f1c40f",
+    "#f39c12",
+    "#e67e22",
+    "#e74c3c",
+    "#fd79a8",
+    "#55efc4",
+    "#81ecec",
+    "#fab1a0",
+    "#dfe6e9",
+  ];
+
   // Recorre el array y agrega cada nombre como un <li> al <ul>.
+  const lista = document.getElementById("listaAmigos");
+  lista.innerHTML = ""; // Asegúrate de limpiar antes
+
   for (let i = 0; i < amigos.length; i++) {
-    document.getElementById("listaAmigos").innerHTML += `<li>${amigos[i]}</li>`;
+    const color = colores[Math.floor(Math.random() * colores.length)];
+    lista.innerHTML += `<li style="color:${color}">[${amigos[i]}]</li>`;
   }
 }
 

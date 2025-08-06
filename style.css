@@ -1,6 +1,6 @@
 :root {
   --color-primary: #4b69fd;
-  --color-secondary: #fff9eb;
+  --color-secondary: #3b29499d;
   --color-tertiary: #c4c4c4;
   --color-button: #fe652b;
   --color-button-hover: #e55720;
@@ -16,7 +16,9 @@
 }
 
 body {
-  height: 100vh;
+  width: fit-content;
+  height: 90vh;
+  margin: auto;
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;
@@ -26,17 +28,17 @@ body {
 .main-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  min-height: 90%;
+  width: 90%;
 }
 
 /* Banner */
 .header-banner {
-  flex: 40%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0 0;
+}
+
+.header-banner img {
+  width: 60%;
 }
 
 /* Sección de entrada */
@@ -44,17 +46,19 @@ body {
   flex: 60%;
   background-color: var(--color-secondary);
   border: 1px solid #000;
-  border-radius: 64px 64px 0 0;
+  border-radius: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 100%;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Títulos */
 .main-title {
-  font-size: 48px;
+  min-width: 40%;
+  margin-left: 5%;
+  font-size: 45px;
   font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: italic;
@@ -65,7 +69,7 @@ body {
   font-family: "Inter", serif;
   font-size: 36px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-white);
   margin: 10px 0;
   text-align: center;
 }
@@ -74,9 +78,9 @@ body {
 .input-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   max-width: 600px;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .input-name {
@@ -88,8 +92,8 @@ body {
 }
 
 .button-container {
-  width: 300px;
-  justify-content: center;
+  width: 40%;
+  justify-items: center;
 }
 
 /* Estilos de entrada de texto */
@@ -106,7 +110,7 @@ body {
 
 /* Estilos de botón */
 button {
-  padding: 15px 30px;
+  padding: 3% 5%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   border: 2px solid #000;
@@ -119,6 +123,7 @@ button {
   background-color: var(--color-tertiary);
   color: var(--color-text);
   border-radius: 0 25px 25px 0;
+  width: 35%;
 }
 
 .button-add:hover {
@@ -127,11 +132,20 @@ button {
 
 /* Listas */
 ul {
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
   color: var(--color-text);
   font-family: "Inter", sans-serif;
   font-size: 18px;
   margin: 20px 0;
+}
+
+.result-list li {
+  margin: 0 0 5px 0;
 }
 
 .result-list {
@@ -148,7 +162,7 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 5px 40px;
+  min-width: 130px;
   color: var(--color-white);
   background-color: var(--color-button);
   font-size: 16px;
@@ -156,7 +170,8 @@ ul {
 
 .button-draw img,
 .button-reset img {
-  margin-right: 40px;
+  margin-right: 12%;
+  margin-left: 6%;
 }
 
 .button-draw:hover,
