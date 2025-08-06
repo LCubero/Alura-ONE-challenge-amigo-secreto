@@ -77,9 +77,22 @@ body {
 .input-wrapper {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   max-width: 600px;
   margin-top: 12px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 15px;
+}
+input::-moz-placeholder {
+  font-size: 15px;
+}
+input:-ms-input-placeholder {
+  font-size: 15px;
+}
+input::placeholder {
+  font-size: 15px;
 }
 
 .input-name {
@@ -109,7 +122,6 @@ body {
 
 /* Estilos de botón */
 button {
-  padding: 3% 5%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   border: 2px solid #000;
@@ -119,6 +131,7 @@ button {
 }
 
 .button-add {
+  padding: 3% 2%;
   background-color: var(--color-tertiary);
   color: var(--color-text);
   border-radius: 0 25px 25px 0;
@@ -158,10 +171,11 @@ ul {
 /* Botón de sortear título y reiniciar */
 .button-draw,
 .button-reset {
+  padding: 3% 0;
   display: flex;
   align-items: center;
   width: 100%;
-  min-width: 130px;
+  min-width: 135px;
   color: var(--color-white);
   background-color: var(--color-button);
   font-size: 16px;
@@ -176,6 +190,10 @@ ul {
 .button-draw:hover,
 .button-reset:hover {
   background-color: var(--color-button-hover);
+}
+
+.button-text {
+  padding-right: 15%;
 }
 
 #resetButton {
