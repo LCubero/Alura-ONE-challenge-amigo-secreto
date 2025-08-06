@@ -9,6 +9,8 @@ Este proyecto fue desarrollado como parte de los cursos de **Oracle ONE** en col
 
 ![demo](assets/vista-previa.png)
 
+🔗 [Probar la app en vivo](https://lcubero.github.io/Alura-ONE-challenge-amigo-secreto/)
+
 ---
 
 ## ✨ Características
@@ -61,7 +63,7 @@ Este proyecto se encuentra bajo una licencia abierta. Puedes modificarlo y reuti
 
 ## 🙌 Créditos
 
-Desarrollado como parte del programa **Oracle ONE + Alura Latam** por [Luis Diego Cubero Chavarría](https://github.com/LCubero).
+Desarrollado como parte del programa **Oracle ONE + Alura Latam** por [Luis Diego Cubero Chavarría](https://github.com/LCubero).  
 El diseño de interfaz basado en las guías visuales de Alura.
 
 ---
